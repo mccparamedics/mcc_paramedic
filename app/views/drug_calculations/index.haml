@@ -4,6 +4,6 @@
 %p Note: Round decimals to the hundredths place (1.39 instead of 1.394). Start with leading zeros (0.47), and do not use trailing zeros (0.47 instead of 0.470).
 
 %div(ng-controller="DrugCalculationCtrl")
-  .row(ng-repeat="valueGroup in valueGroups" style="margin-bottom: 10px")
+  .row(ng-repeat="valueGroup in valueGroups")
     %drug-calculation(ng-repeat="value in valueGroup" ng-model="value")
 
