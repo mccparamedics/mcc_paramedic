@@ -26,6 +26,21 @@ GIT
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
 
+GIT
+  remote: git://github.com/twbs/bootstrap-sass.git
+  revision: 54317e5c02a4915e7a5def3a3e94cc2738a51ed3
+  specs:
+    bootstrap-sass (3.2.0.1)
+      sass (~> 3.2)
+
+GIT
+  remote: https://github.com/pcragone/angular-gem
+  revision: 09ddf573e096d1e655cbbb5274dcff9aea1fb8dc
+  specs:
+    angular-gem (1.2.21)
+      coffee-script (~> 2.3.0)
+      railties (>= 4.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -55,6 +70,10 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    angular-rails-templates (0.1.3)
+      railties (>= 3.1)
+      sprockets
+      tilt
     arbre (1.0.1)
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
@@ -64,6 +83,8 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass-extras (0.0.6)
+      rails (>= 3.1.0)
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
@@ -297,6 +318,7 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    underscore-rails (1.6.0)
     validates_formatting_of (0.8.1)
       activemodel (~> 4.0)
     warden (1.2.3)
@@ -309,8 +331,12 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  angular-gem (~> 1.2.21)!
+  angular-rails-templates
   better_errors
   binding_of_caller
+  bootstrap-sass!
+  bootstrap-sass-extras
   bundler
   coffee-rails (~> 4.0.0)
   cucumber-rails
@@ -338,4 +364,5 @@ DEPENDENCIES
   turbolinks
   tzinfo-data
   uglifier (>= 1.3.0)
+  underscore-rails (~> 1.6.0)
   validates_formatting_of

@@ -15,4 +15,14 @@
 //= require turbolinks
 //= require bootstrap
 
+//= require underscore
+//= require ./underscore_extensions
+//= require angular
+//= require angular-route
+//= require angular-rails-templates
+
+//= require ./pharma
+//= require_tree ../templates
+//= require_tree ./angular
+
 //= require_tree .

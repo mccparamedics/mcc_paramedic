@@ -47,13 +47,18 @@ gem 'devise', github: 'plataformatec/devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'activeadmin', github: 'gregbell/active_admin'
-# gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
-# gem 'bootstrap-sass-extras'
+gem 'bootstrap-sass', github: 'twbs/bootstrap-sass'
+gem 'bootstrap-sass-extras'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
 gem 'google-analytics-rails'
 gem 'validates_formatting_of'
 gem 'tzinfo-data'
+
+gem 'angular-gem', '~> 1.2.21', git: 'https://github.com/pcragone/angular-gem' #ELIQUIS~> 1.1'
+gem 'angular-rails-templates'
+gem 'underscore-rails', '~> 1.6.0'
+
 
 group :development, :test do
   gem 'dotenv-rails'
