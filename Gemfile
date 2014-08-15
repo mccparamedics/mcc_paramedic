@@ -80,5 +80,5 @@ gem 'newrelic_rpm'
 
 gem 'forem', :github => "radar/forem", :branch => "rails4"
 gem 'will_paginate', '~> 3.0.7'
-# gem 'forem-bootstrap', :github => "pcragone/forem-bootstrap"
-gem 'forem-bootstrap', '=0.0.2'#:github => "pcragone/forem-bootstrap"
+gem 'forem-bootstrap', :github => "pcragone/forem-bootstrap"
+# gem 'forem-bootstrap', '=0.0.2'#:github => "pcragone/forem-bootstrap"

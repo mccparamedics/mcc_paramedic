@@ -16,6 +16,13 @@ GIT
       sass-rails
 
 GIT
+  remote: git://github.com/pcragone/forem-bootstrap.git
+  revision: 8882c0495ce148927e12098026b441679d1e6f2f
+  specs:
+    forem-bootstrap (0.0.2)
+      bootstrap-sass (~> 3.2)
+
+GIT
   remote: git://github.com/plataformatec/devise.git
   revision: 447b7030f856a3e1e9a08f3cc038977587420b9c
   specs:
@@ -156,8 +163,6 @@ GEM
       railties (>= 3.0.0)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
-    forem-bootstrap (0.0.2)
-      bootstrap-sass (~> 3.2)
     formtastic (2.3.0.rc3)
       actionpack (>= 3.0)
     friendly_id (5.0.4)
@@ -383,7 +388,7 @@ DEPENDENCIES
   dotenv-rails
   factory_girl_rails
   forem!
-  forem-bootstrap (= 0.0.2)
+  forem-bootstrap!
   google-analytics-rails
   haml
   jbuilder (~> 2.0)
