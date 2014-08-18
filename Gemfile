@@ -75,7 +75,10 @@ group :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
 end
-gem 'rails_12factor', group: :production
+
+group :production, :staging do
+  gem 'rails_12factor'
+end
 gem 'newrelic_rpm'
 
 gem 'forem', :github => "radar/forem", :branch => "rails4"
