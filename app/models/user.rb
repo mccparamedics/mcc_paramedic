@@ -15,6 +15,9 @@ class User < ActiveRecord::Base
     end
   end
 
+  def is_admin?
+    admin
+  end
 
   devise authentication_keys: [:login]
 end
