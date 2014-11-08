@@ -25,3 +25,6 @@ test:
 production:
   <<: *default
   database: mccparamedic
+staging:
+  <<: *default
+  database: mccparamedic

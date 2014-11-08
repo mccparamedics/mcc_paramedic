@@ -1,0 +1,11 @@
+#forums_container
+  %h1#forums_title= t('.title')
+  -if forem_admin?
+    =link_to t("area", :scope => "forem.admin"), forem.admin_root_path
+
+  - unless forem_user
+    %p You must be logged in to access the forums.  Users are MCC Paramedic students, alumni and faculty. Email webmaster@mccparamedic.org to request an account if you have not been sent an invitation already.
+
+  =render @categories
+
+%br

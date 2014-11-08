@@ -19,5 +19,17 @@ class User < ActiveRecord::Base
     admin
   end
 
+  def can_read_forem_forums?
+    persisted?
+  end
+
+  def can_read_forem_category? category
+    persisted?
+  end
+
+  def authenticate_admin_user!
+
+  end
+
   devise authentication_keys: [:login]
 end
