@@ -27,9 +27,5 @@ class User < ActiveRecord::Base
     persisted?
   end
 
-  def authenticate_admin_user!
-
-  end
-
   devise authentication_keys: [:login]
 end

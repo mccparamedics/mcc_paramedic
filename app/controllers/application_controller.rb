@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
+  prepend_before_filter :store_location
 
   protected
 
@@ -21,7 +22,10 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_admin!
-    redirect_to new_user_session_path unless current_user.is_admin?
+    redirect_to new_user_session_path, notice: "You must log in to access that page." and return unless current_user
+    redirect_to :back, notice: "You are not an administrator." unless current_user.try(:is_admin?)
+  rescue ActionController::RedirectBackError
+    redirect_to root_path, notice: "You are not an administrator."
   end
 
   private
@@ -44,4 +48,18 @@ class ApplicationController < ActionController::Base
     end
   end
 
+
+  def store_location
+    # store last url - this is needed for post-login redirect to whatever the user last visited.
+    logger.info "store_location: request.fullpath: #{request.fullpath}"
+    logger.info "return_to path: #{session["user_return_to"]}"
+    if (request.fullpath != "/login" &&
+        request.fullpath != "/signup" &&
+        request.fullpath != "/users/password" &&
+        request.fullpath != "/users/sign_out" &&
+        !request.xhr?) # don't store ajax calls
+      session["user_return_to"] = request.fullpath
+    end
+    logger.info "return_to path: #{session["user_return_to"]}"
+  end
 end
