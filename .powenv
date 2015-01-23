@@ -1,7 +1,7 @@
-export PATH="/Users/pragone/.rvm/gems/ruby-2.1.1@mccparamedic/bin:/Users/pragone/.rvm/gems/ruby-2.1.1@global/bin:/Users/pragone/.rvm/rubies/ruby-2.1.1/bin:$PATH"
-export GEM_HOME='/Users/pragone/.rvm/gems/ruby-2.1.1@mccparamedic'
-export GEM_PATH='/Users/pragone/.rvm/gems/ruby-2.1.1@mccparamedic:/Users/pragone/.rvm/gems/ruby-2.1.1@global'
-export MY_RUBY_HOME='/Users/pragone/.rvm/rubies/ruby-2.1.1'
-export IRBRC='/Users/pragone/.rvm/rubies/ruby-2.1.1/.irbrc'
+export PATH="/Users/pragone/.rvm/gems/ruby-2.1.5@mccparamedic/bin:/Users/pragone/.rvm/gems/ruby-2.1.5@global/bin:/Users/pragone/.rvm/rubies/ruby-2.1.5/bin:$PATH"
+export GEM_HOME='/Users/pragone/.rvm/gems/ruby-2.1.5@mccparamedic'
+export GEM_PATH='/Users/pragone/.rvm/gems/ruby-2.1.5@mccparamedic:/Users/pragone/.rvm/gems/ruby-2.1.5@global'
+export MY_RUBY_HOME='/Users/pragone/.rvm/rubies/ruby-2.1.5'
+export IRBRC='/Users/pragone/.rvm/rubies/ruby-2.1.5/.irbrc'
 unset MAGLEV_HOME
 unset RBXOPT
