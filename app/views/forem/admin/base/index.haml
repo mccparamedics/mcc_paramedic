@@ -1,12 +1,12 @@
-%h1
-  = t('forem.admin.area')
-#admin_link
-  = link_to t(:back_to_forums, :scope => 'forem.admin'), forem.root_path
+.well
+  .page-header.clearfix
+    %h2.pull-left Admin Area
+    %small.pull-right.btn-group(style="margin-top:17px;")
+      = link_to t(:back_to_forums, :scope => 'forem.admin'), forem.root_path, class: 'btn btn-default'
+  .list-group
+    = link_to forem.admin_forums_path, class: 'list-group-item' do
+      %i.glyphicon.glyphicon-minus
+      Manage Forums
+    = link_to "Manage Forum Categories", forem.admin_categories_path, class: 'list-group-item'
+    = link_to "Manage Groups", forem.admin_groups_path, class: 'list-group-item'
 
-%p
-  = t('forem.admin.welcome')
-
-%ul
-  %li= link_to t('forem.admin.forum.index'), forem.admin_forums_path
-  %li= link_to t('forem.admin.category.index'), forem.admin_categories_path
-  %li= link_to t('forem.admin.group.index'), forem.admin_groups_path
