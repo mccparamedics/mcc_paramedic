@@ -1,0 +1,4 @@
+#!/bin/bash --login
+cd ~/projects/mcc_paramedic
+source .powrc
+zeus start > log/zeus.log &

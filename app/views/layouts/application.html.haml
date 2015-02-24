@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title MCC Paramedic
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    / Prelang: Analytics / Google Analytics
+    = analytics_init if Rails.env.production?
+  %body
+    .container#wrap
+      .row#main
+        .col-lg-1
+        .col-lg-10
+          = render partial: "elements/navbar"
+          .content.clearfix
+            -# = render partial: "layouts/flash_messages", flash: flash
+            = bootstrap_flash
+            = yield
+        .col-lg-1
+    = render partial: "elements/footer"
